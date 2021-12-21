@@ -60,7 +60,7 @@ def send_email(smtpemail, smtppass, to, subject, messagebody, imgname):
     image = MIMEImage(img_data, name=os.path.basename(imgname))
     msg.attach(image)
 
-    # can be changed to any other smtp email services.
+    # this can be changed to any other smtp email services.
     s = smtplib.SMTP_SSL("smtp.163.com", "465")
     s.ehlo()
     s.login(smtpemail, smtppass)
@@ -75,11 +75,14 @@ def send_email(smtpemail, smtppass, to, subject, messagebody, imgname):
 @click.option("--smtpemail", default="", help="SMTP email address")
 @click.option("--smtppass", default="", help="SMTP email password")
 @click.option("--threshold", default=1.0, help="threshold for sending email")
+
 def run(folder, url, css, to, smtpemail, smtppass, threshold):
     logger.debug("changing dir to {}", folder)
     os.chdir(folder)
     with open("index.js", "w") as f:
         f.write(indexjs)
+
+    # we use puppeteer to generate screenshots of webpages
     if not os.path.exists(os.path.join("node_modules", "puppeteer")):
         logger.debug("installing puppeteer in {}", os.path.abspath("."))
         os.system("npm i puppeteer")
