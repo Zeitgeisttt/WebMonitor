@@ -21,3 +21,14 @@ When the website changes (which means new houses are available), the specified e
 
 ## Usage
 
+First, install required packages using pip:
+```
+pip install click numpy loguru scikit-image opencv-python
+```
+Then, change the "example@xxx.com" in the .sh file to your email address.  
+
+You can now run the .sh file in the command line by entering ./xxx.sh under its directory!
+
+## Customization
+
+You 
