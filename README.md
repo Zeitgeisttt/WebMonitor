@@ -50,13 +50,14 @@ Sometimes you may not want to be notified of every small change on the webpage, 
 #### 4. time interval
 You can change the value after "--sleep" in the .sh file to control how often we check the website for changes. The default is 30, which means we check the website every 30 seconds so that you will get notified in at most 30 seconds after the website changes. This is a tradeoff between how quickly you get notified and how much CPU/Memory you want this program to use.
 
-## Reference
+## References
 Thanks again to the inspiration of Zack Scholl's [blog](https://schollz.com/blog/pottery)!  
 Other References:  
 &ensp;[skimage.metrics.structural_similarity](https://scikit-image.org/docs/dev/api/skimage.metrics.html#skimage.metrics.structural_similarity)  
 &ensp;[Carlos Delgado's article on SSIM](https://ourcodeworld.com/articles/read/991/how-to-calculate-the-structural-similarity-index-ssim-between-two-images-with-python)  
 &ensp;[click](https://click.palletsprojects.com/en/8.0.x/)  
 &ensp;[loguru](https://loguru.readthedocs.io/en/stable/)  
+&ensp;[puppeteer](https://github.com/puppeteer/puppeteer)
 
 ## License
 MIT
